@@ -228,6 +228,7 @@
 mod blockchain;
 mod control;
 mod network;
+mod raw_transactions;
 mod util;
 mod wallet;
 
@@ -243,6 +244,9 @@ pub use self::{
     },
     control::GetRpcInfo,
     network::{GetNetworkInfo, GetPeerInfo, PeerInfo},
+    raw_transactions::{
+        DecodeScript, DecodeScriptError, DecodeScriptSegwit, DecodeScriptSegwitError,
+    },
     util::GetDescriptorInfo,
     wallet::{
         GetBalances, GetBalancesError, GetBalancesMine, GetBalancesWatchOnly, GetTransaction,
